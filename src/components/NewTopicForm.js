@@ -14,12 +14,9 @@ export default function NewTopicForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (name.length === 0) {
-      return;
-    }
 
     // dispatch your add topic action here
-    dispatch(addTopic());
+    dispatch(addTopic({ name: name, id: uuidv4(), icon }));
     history.push(ROUTES.topicsRoute());
 
   };
@@ -51,7 +48,11 @@ export default function NewTopicForm() {
             ))}
           </select>
         </div>
-        <button className="center">Add Topic</button>
+        <button
+          className="center"
+          disabled={name.length > 0 ? false : true}>
+          Add Topic
+        </button>
       </form>
     </section>
   );

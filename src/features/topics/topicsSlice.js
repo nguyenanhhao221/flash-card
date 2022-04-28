@@ -4,9 +4,7 @@ import { createSlice } from "@reduxjs/toolkit"
 const options = {
     name: 'topics',
     initialState: {
-        topics: {
-
-        }
+        topics: {}
     },
     reducers: {
         addTopic: (state, action) => {
