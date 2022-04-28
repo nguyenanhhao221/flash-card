@@ -51,6 +51,8 @@ export default function App() {
 
 function TopicsRoutes() {
   let match = useRouteMatch();
+  //path : /topics
+  //url: /topics
 
   return (
     <>
