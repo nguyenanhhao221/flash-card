@@ -16,6 +16,10 @@ const options = {
                 quizIds: []
             }
         },
+        addQuizId: (state, action) => {
+            const { quizId, topicId } = action.payload;
+            state.topics[topicId].quizIds.push(quizId);
+        }
     },
 };
 const topicsSlice = createSlice(options);
