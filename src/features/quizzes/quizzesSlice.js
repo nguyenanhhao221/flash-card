@@ -32,21 +32,3 @@ export const { addQuiz } = quizzesSlice.actions;
 
 //selector
 export const selectQuizzes = state => state.quizzes.quizzes;
-
-const quizzesStateExample = {
-    quizzes: {
-        '123': {
-            id: '123',
-            name: 'quiz name',
-            topicId: '456',
-            cardIds: ['1', '2', '3']
-        }
-    }
-};
-
-const actionExample = {
-    id: '123',
-    name: 'quiz name',
-    topicId: '456',
-    cardIds: ['1', '2', '3']
-};
